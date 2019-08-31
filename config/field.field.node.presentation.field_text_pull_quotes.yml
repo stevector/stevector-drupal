@@ -1,0 +1,21 @@
+uuid: 85568543-4642-4e68-9390-7b8ef18b3f0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_pull_quotes
+    - node.type.presentation
+  module:
+    - text
+id: node.presentation.field_text_pull_quotes
+field_name: field_text_pull_quotes
+entity_type: node
+bundle: presentation
+label: 'Pull Quotes'
+description: 'Were there any particularly good lines in this presentation?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

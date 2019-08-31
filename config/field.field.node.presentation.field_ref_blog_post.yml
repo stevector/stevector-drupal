@@ -1,0 +1,29 @@
+uuid: fcb9386f-9e6d-475d-8d05-4a964219e7a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_blog_post
+    - node.type.blog_post
+    - node.type.presentation
+id: node.presentation.field_ref_blog_post
+field_name: field_ref_blog_post
+entity_type: node
+bundle: presentation
+label: 'Related Blog Posts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_post: blog_post
+    sort:
+      field: field_date_published
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

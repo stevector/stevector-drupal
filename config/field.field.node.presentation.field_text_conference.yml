@@ -1,0 +1,19 @@
+uuid: 9ac7224a-d0a3-4bef-9e6a-073c7acca951
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_conference
+    - node.type.presentation
+id: node.presentation.field_text_conference
+field_name: field_text_conference
+entity_type: node
+bundle: presentation
+label: Conference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

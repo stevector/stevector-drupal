@@ -1,0 +1,23 @@
+uuid: 7c408a22-2f77-4194-92c4-c3bab04e3deb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.blog_post
+  module:
+    - link
+id: node.blog_post.field_link
+field_name: field_link
+entity_type: node
+bundle: blog_post
+label: Link
+description: 'Link to original publishing location (often pantheon.io or palantir.net)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

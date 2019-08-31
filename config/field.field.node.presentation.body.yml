@@ -1,18 +1,16 @@
-uuid: f515eb57-7896-432e-a51f-b1122a50a4a8
+uuid: f64a193b-1f64-4ac8-bdca-34d7f11ff49d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.article
+    - node.type.presentation
   module:
     - text
-_core:
-  default_config_hash: Ay3b2hq42cpQTFB_lNu8S2ZxuVIY6-dlBsc7vLeJ-YY
-id: node.article.body
+id: node.presentation.body
 field_name: body
 entity_type: node
-bundle: article
+bundle: presentation
 label: Body
 description: ''
 required: false

@@ -53,11 +53,11 @@ Feature: Content
     Given users:
     | name     | mail            | status |
     | Joe User | joe@example.com | 1      |
-    And "article" content:
+    And "page" content:
     | title          | author   | promote |
-    | Article by Joe | Joe User | 1       |
+    | page by Joe | Joe User | 1       |
     When I am logged in as a user with the "administrator" role
     And I am on the homepage
-    Then I should see the link "Article by Joe"
-    When I follow "Article by Joe"
-    Then I should see the text "Article by Joe"
+    Then I should see the link "page by Joe"
+    When I follow "page by Joe"
+    Then I should see the text "page by Joe"

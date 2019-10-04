@@ -18,6 +18,7 @@
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
         "drupal/core": "^8.6.15",
+        "drupal/graphql": "^4",
         "drupal/gutenberg": "^1.6",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
@@ -46,7 +47,7 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "prefer-stable": true,
     "autoload": {
         "classmap": [
@@ -117,7 +118,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "7.0.8"
+            "php": "7.3"
         }
     }
 }

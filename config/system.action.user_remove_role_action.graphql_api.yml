@@ -1,0 +1,14 @@
+uuid: d641305f-369a-4b00-992b-0cfb32f84069
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.graphql_api
+  module:
+    - user
+id: user_remove_role_action.graphql_api
+label: 'Remove the graphql_api role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: graphql_api

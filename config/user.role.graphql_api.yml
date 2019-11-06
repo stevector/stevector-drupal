@@ -1,0 +1,11 @@
+uuid: 281bfc9a-c3e6-49bd-84b7-b94cc75ef601
+langcode: en
+status: true
+dependencies: {  }
+id: graphql_api
+label: graphql_api
+weight: 3
+is_admin: null
+permissions:
+  - 'execute graphql requests'
+  - 'execute persisted graphql requests'

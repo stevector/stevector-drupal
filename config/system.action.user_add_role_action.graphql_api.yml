@@ -1,0 +1,14 @@
+uuid: ede220da-bf3f-4d96-aad9-c026d1b0e4a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.graphql_api
+  module:
+    - user
+id: user_add_role_action.graphql_api
+label: 'Add the graphql_api role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: graphql_api

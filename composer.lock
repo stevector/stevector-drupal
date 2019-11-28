@@ -1886,7 +1886,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/graphql.git",
-                "reference": "f20bec9e632879eadf4c40ef4e39c9cdbca6ea62"
+                "reference": "3995b976a0028df3345f9556b8e45b97f59abe3c"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -1898,8 +1898,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-rc3+13-dev",
-                    "datestamp": "1564736285",
+                    "version": "8.x-3.0+0-dev",
+                    "datestamp": "1572535987",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1929,7 +1929,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/graphql"
             },
-            "time": "2019-08-02T08:48:07+00:00"
+            "time": "2019-10-31T15:10:44+00:00"
         },
         {
             "name": "drupal/gutenberg",

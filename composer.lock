@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7989ea613de50b55ac7188572a38d6ee",
+    "content-hash": "2b4479a5bf12c927e06aa169deb4ed52",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1228,6 +1228,57 @@
             "time": "2019-03-30T10:41:38+00:00"
         },
         {
+            "name": "drupal/build_hooks",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/build_hooks.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/build_hooks-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "e9e3e0ad4c63b4ba6579ce3b8409e0138b69765d"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1559417885",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jmolivas",
+                    "homepage": "https://www.drupal.org/user/678770"
+                },
+                {
+                    "name": "vermario",
+                    "homepage": "https://www.drupal.org/user/121062"
+                }
+            ],
+            "description": "Triggers a build hook on any service provider that supports build hooks.",
+            "homepage": "https://www.drupal.org/project/build_hooks",
+            "support": {
+                "source": "https://git.drupalcode.org/project/build_hooks"
+            }
+        },
+        {
             "name": "drupal/config_direct_save",
             "version": "1.0.0",
             "source": {
@@ -1886,7 +1937,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/graphql.git",
-                "reference": "f20bec9e632879eadf4c40ef4e39c9cdbca6ea62"
+                "reference": "3995b976a0028df3345f9556b8e45b97f59abe3c"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -1898,8 +1949,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-rc3+13-dev",
-                    "datestamp": "1564736285",
+                    "version": "8.x-3.0+0-dev",
+                    "datestamp": "1572535987",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1929,7 +1980,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/graphql"
             },
-            "time": "2019-08-02T08:48:07+00:00"
+            "time": "2019-10-31T15:10:44+00:00"
         },
         {
             "name": "drupal/gutenberg",
@@ -5201,6 +5252,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies",
+            "abandoned": "drupal/core-recommended",
             "time": "2019-08-07T19:30:50+00:00"
         },
         {
@@ -5526,6 +5578,7 @@
                 "psr",
                 "psr-7"
             ],
+            "abandoned": "laminas/laminas-diactoros",
             "time": "2017-08-17T21:21:00+00:00"
         },
         {
@@ -5570,6 +5623,7 @@
                 "escaper",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-escaper",
             "time": "2016-06-30T19:48:38+00:00"
         },
         {
@@ -5631,6 +5685,7 @@
                 "feed",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-feed",
             "time": "2016-02-11T18:54:29+00:00"
         },
         {
@@ -5676,6 +5731,7 @@
                 "stdlib",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-stdlib",
             "time": "2016-04-12T21:19:36+00:00"
         }
     ],
@@ -6179,6 +6235,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {

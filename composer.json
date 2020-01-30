@@ -7,6 +7,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "path",
+            "url": "composer-path-repos/libraries/hacky-proxy"
         }
     ],
     "require": {
@@ -23,10 +27,13 @@
         "drupal/rel_to_abs": "^1.2",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
+        "jenssegers/proxy": "^3.0",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
+        "stevector/hacky-proxy": "dev-proxying",
         "webflo/drupal-core-strict": "^8.6.15",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "zendframework/zend-diactoros": "^1"
     },
     "require-dev": {
         "behat/behat": "3.*",
@@ -48,7 +55,7 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "classmap": [

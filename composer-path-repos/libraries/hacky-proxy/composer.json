@@ -6,6 +6,9 @@
         "zendframework/zend-diactoros": "^1",
         "jenssegers/proxy": "^3.0"
     },
+    "autoload": {
+        "psr-4": { "Stevector\\HackyProxy\\": "src/" }
+    },
     "authors": [
         {
             "name": "Steve Persch",

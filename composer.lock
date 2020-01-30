@@ -3507,7 +3507,7 @@
             "dist": {
                 "type": "path",
                 "url": "composer-path-repos/libraries/hacky-proxy",
-                "reference": "7beacd2895df31be1f0fb7b35d29a02130613b7b",
+                "reference": "dec92b9ee1b56e4a1143789e04b5845949a3f1b1",
                 "shasum": null
             },
             "require": {
@@ -3515,6 +3515,11 @@
                 "zendframework/zend-diactoros": "^1"
             },
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stevector\\HackyProxy\\": "src/"
+                }
+            },
             "authors": [
                 {
                     "name": "Steve Persch",

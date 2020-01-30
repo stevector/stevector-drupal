@@ -7,6 +7,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/jsdrupal/admin_ui"
         }
     ],
     "require": {
@@ -48,7 +52,7 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "classmap": [

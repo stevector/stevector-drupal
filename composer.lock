@@ -3507,7 +3507,7 @@
             "dist": {
                 "type": "path",
                 "url": "composer-path-repos/libraries/hacky-proxy",
-                "reference": "dec92b9ee1b56e4a1143789e04b5845949a3f1b1",
+                "reference": "1cd9aa122456546ad164ce33970613d615d12546",
                 "shasum": null
             },
             "require": {
@@ -3518,7 +3518,10 @@
             "autoload": {
                 "psr-4": {
                     "Stevector\\HackyProxy\\": "src/"
-                }
+                },
+                "files": [
+                    "fun.php"
+                ]
             },
             "authors": [
                 {

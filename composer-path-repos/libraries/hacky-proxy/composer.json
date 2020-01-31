@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": { "Stevector\\HackyProxy\\": "src/" },
-        "files": [ "fun.php" ]
+        "files": [ "proxy-loader.php" ]
     },
     "authors": [
         {

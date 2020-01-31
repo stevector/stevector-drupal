@@ -3507,7 +3507,7 @@
             "dist": {
                 "type": "path",
                 "url": "composer-path-repos/libraries/hacky-proxy",
-                "reference": "1cd9aa122456546ad164ce33970613d615d12546",
+                "reference": "f42deab938093933d18a8d1c3ddf34534aa4e068",
                 "shasum": null
             },
             "require": {
@@ -3520,7 +3520,7 @@
                     "Stevector\\HackyProxy\\": "src/"
                 },
                 "files": [
-                    "fun.php"
+                    "proxy-loader.php"
                 ]
             },
             "authors": [

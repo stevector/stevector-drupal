@@ -23,13 +23,18 @@ workflows:
     - cypress/run:
         requires:
         - pantheon/push
-        store_artifacts: true
+        # store_artifacts: true
         working_directory: tests/cypress
 
         cache-key: >-
           cache-{{ arch }}-{{ .Branch }}-{{ checksum "tests/cypress/package-lock.json"
           }}
 
+        post-steps:
+          - store_artifacts:
+              path: tests/cypress/cypress/videos
+          - store_artifacts:
+              path: tests/cypress/cypress/screenshots
 
         pre-steps:
         - playground/setbashenv

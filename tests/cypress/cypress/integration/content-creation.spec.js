@@ -7,10 +7,14 @@ describe('Hello world ', function(){
       cy.get('input[name=pass]').type(Cypress.env('PASS_CONTENT_ADMIN') + '{enter}')
 
       cy.visit('node/add/blog_post');
-      var d = new Date();
-      var n = d.getTime();
-      const title = 'Hello World ' + n;
+      // var d = new Date();
+      // var n = d.getTime();
+      // const title = 'Hello World ' + n;
+      // cy.get('input[name="title[0][value]"]').type(title, {force: true})
+
+      const title = 'Hello World ';
       cy.get('input[name="title[0][value]"]').type(title, {force: true})
+
       cy.get('#edit-submit').click({force: true});
       cy.wait(500);
       cy.get('h1.page-title').contains(title);

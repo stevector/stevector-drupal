@@ -1,0 +1,6 @@
+name: stevector-drupal
+recipe: pantheon
+config:
+  framework: drupal8
+  site: stevector-drupal
+  id: 80399953-9ad7-41ed-a5b8-4b55d64c30bd

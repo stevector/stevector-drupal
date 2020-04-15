@@ -14,14 +14,14 @@
         "cweagans/composer-patches": "^1.0",
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/console": "^1",
-        "drupal/core": "~8.7.13",
+        "drupal/core": "8.7.8",
         "drupal/graphql": "3.x-dev",
         "drupal/gutenberg": "^1.6",
         "drupal/rel_to_abs": "^1.2",
         "drush/drush": "~8.3",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
-        "webflo/drupal-core-strict": "8.7.13",
+        "webflo/drupal-core-strict": "8.7.8",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {

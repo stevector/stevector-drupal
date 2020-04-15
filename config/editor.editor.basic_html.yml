@@ -43,8 +43,6 @@ settings:
           items:
             - Source
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
 image_upload:
@@ -53,5 +51,5 @@ image_upload:
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

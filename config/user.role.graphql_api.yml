@@ -7,5 +7,6 @@ label: graphql_api
 weight: 3
 is_admin: null
 permissions:
+  - 'bypass graphql field security'
   - 'execute graphql requests'
   - 'execute persisted graphql requests'

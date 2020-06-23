@@ -16,6 +16,7 @@
         "drupal/console": "^1",
         "drupal/core": "^8.8",
         "drupal/graphql": "3.x-dev",
+        "drupal/graphql_apq": "^1.0@beta",
         "drupal/gutenberg": "^1.6",
         "drupal/rel_to_abs": "^1.2",
         "drush/drush": "~8.3",

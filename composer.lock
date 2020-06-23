@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c4117b1072b06b9a6dfdbb7a2a844a1",
+    "content-hash": "68de884df1e74cf72aab47209d0bb83d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1815,6 +1815,52 @@
             "time": "2020-03-30T20:43:09+00:00"
         },
         {
+            "name": "drupal/graphql_apq",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/graphql_apq.git",
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/graphql_apq-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "2fbe520fa0a7e88d1bd93b797ac14cbce9bf0bb1"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/graphql": "*",
+                "webonyx/graphql-php": "^0.12.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1572880084",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "sebas5384",
+                    "homepage": "https://www.drupal.org/user/567694"
+                }
+            ],
+            "description": "Automatic Persisted Queries for Drupal's GraphQL module.",
+            "homepage": "http://drupal.org/project/graphql_apq",
+            "support": {
+                "source": "https://git.drupalcode.org/project/graphql_apq"
+            }
+        },
+        {
             "name": "drupal/gutenberg",
             "version": "1.10.0",
             "source": {
@@ -2059,12 +2105,12 @@
             "version": "0.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/njh/easyrdf.git",
+                "url": "https://github.com/easyrdf/easyrdf.git",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/njh/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
+                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "shasum": ""
             },
@@ -6816,7 +6862,8 @@
     "aliases": [],
     "minimum-stability": "alpha",
     "stability-flags": {
-        "drupal/graphql": 20
+        "drupal/graphql": 20,
+        "drupal/graphql_apq": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

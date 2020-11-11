@@ -115,3 +115,4 @@ Thumbs.db
 /robots.txt
 /update.php
 /web.config
+/.drush-lock-update

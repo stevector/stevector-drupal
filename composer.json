@@ -59,6 +59,7 @@
         ]
     },
     "extra": {
+        "enable-patching": true,
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
@@ -68,28 +69,34 @@
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
-        "build-env": {
-            "install-cms": [
-                "drush site-install standard --account-mail={account-mail} --account-name={account-name} --account-pass={account-pass} --site-mail={site-mail} --site-name={site-name} --yes"
-            ],
-            "export-configuration": "drush config-export --yes"
+        "patches": {
+            "drupal/core": {
+                "db version": "https://raw.githubusercontent.com/stevector/drupal-9-project/master/patches/issue-2--mariadb-version.patch"
+            }
         },
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
         "drupal-scaffold": {
-            "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8-scaffolding/{version}/{path}",
-            "includes": [
-                "sites/default/default.services.pantheon.preproduction.yml",
-                "sites/default/settings.pantheon.php"
+            "allowed-packages": [
+                "pantheon-systems/drupal-integrations"
             ],
-            "excludes": [
-                ".csslintrc",
-                ".editorconfig",
-                ".eslintignore",
-                ".eslintrc.json",
-                ".htaccess",
-                "web.config"
-            ]
+            "locations": {
+                "web-root": "./web"
+            },
+            "file-mapping": {
+                "[project-root]/.editorconfig": false,
+                "[project-root]/pantheon.upstream.yml": false
+            }
         }
     },
+
+    "scripts": {
+        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon"
+    },
+
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -98,4 +105,40 @@
             "php": "7.3"
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

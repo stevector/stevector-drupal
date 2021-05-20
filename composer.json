@@ -5,30 +5,27 @@
     "license": "MIT",
     "repositories": [
         {
+            "type": "git",
+            "url": "https://github.com/stevector/rel_to_abs.git"
+        },
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
+
     ],
     "require": {
-        "php": ">=7.0.8",
         "cweagans/composer-patches": "^1.0",
-        "drupal-composer/drupal-scaffold": "^2.0.1",
-        "drupal/console": "^1",
-        "drupal/core": "^8.8",
         "drupal/graphql": "3.x-dev",
         "drupal/gutenberg": "^1.6",
-        "drupal/rel_to_abs": "^1.2",
-        "drush/drush": "~8.3",
+        "drupal/rel_to_abs": "dev-d9-3145723",
         "pantheon-systems/quicksilver-pushback": "^2",
-        "rvtraveller/qs-composer-installer": "^1.1",
-        "webflo/drupal-core-strict": "^8.8",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
-    },
-    "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-        "drupal/coder": "^8.3.1",
-        "phpunit/phpunit": "^4.8",
-        "squizlabs/php_codesniffer": "^3.4.0"
+        "php": ">=7.1",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "^9",
+        "pantheon-systems/drupal-integrations": "^8",
+        "drush/drush": "^10",
+        "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "conflict": {
             "drupal/drupal": "*"
@@ -46,13 +43,7 @@
             "composer install --optimize-autoloader --no-dev"
         ],
         "lint": "find web/modules/custom web/themes/custom -name '*.php' -exec php -l {} \\;",
-        "code-sniff": [
-            "./vendor/bin/phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor ./web/modules/custom",
-            "./vendor/bin/phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor ./web/themes/custom",
-            "./vendor/bin/phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor ./web/modules/custom",
-            "./vendor/bin/phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor ./web/themes/custom"
-        ],
-        "unit-test": "echo 'No unit test step defined.'",
+
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
         "post-install-cmd": [
@@ -68,6 +59,7 @@
         ]
     },
     "extra": {
+        "enable-patching": true,
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
@@ -77,28 +69,34 @@
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
-        "build-env": {
-            "install-cms": [
-                "drush site-install standard --account-mail={account-mail} --account-name={account-name} --account-pass={account-pass} --site-mail={site-mail} --site-name={site-name} --yes"
-            ],
-            "export-configuration": "drush config-export --yes"
+        "patches": {
+            "drupal/core": {
+                "db version": "https://raw.githubusercontent.com/stevector/drupal-9-project/master/patches/issue-2--mariadb-version.patch"
+            }
         },
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
         "drupal-scaffold": {
-            "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8-scaffolding/{version}/{path}",
-            "includes": [
-                "sites/default/default.services.pantheon.preproduction.yml",
-                "sites/default/settings.pantheon.php"
+            "allowed-packages": [
+                "pantheon-systems/drupal-integrations"
             ],
-            "excludes": [
-                ".csslintrc",
-                ".editorconfig",
-                ".eslintignore",
-                ".eslintrc.json",
-                ".htaccess",
-                "web.config"
-            ]
+            "locations": {
+                "web-root": "./web"
+            },
+            "file-mapping": {
+                "[project-root]/.editorconfig": false,
+                "[project-root]/pantheon.upstream.yml": false
+            }
         }
     },
+
+    "scripts": {
+        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon"
+    },
+
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -107,4 +105,40 @@
             "php": "7.3"
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

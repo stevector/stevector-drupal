@@ -7,7 +7,6 @@ dependencies:
       - gutenberg
   module:
     - gutenberg
-    - rel_to_abs
 _core:
   default_config_hash: ZL8nJqHgLn2UENuM0-JEqvWX18GrWKtWDJaOjaXTick
 name: 'Gutenberg Blocks text format'
@@ -40,9 +39,10 @@ filters:
     status: true
     weight: 1
     settings: {  }
-  rel_to_abs:
-    id: rel_to_abs
-    provider: rel_to_abs
-    status: true
+  filter_field_mapping:
+    id: filter_field_mapping
+    provider: gutenberg
+    status: false
     weight: 0
-    settings: {  }
+    settings:
+      enable_filter: '0'

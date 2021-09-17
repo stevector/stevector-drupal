@@ -3,7 +3,6 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-    - playground/unit
     - pantheon/push:
         checkout: false
         pre-steps:

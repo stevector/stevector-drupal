@@ -102,3 +102,7 @@ Thumbs.db
 ##########
 .sass-cache
 /.drush-lock-update
+
+
+
+/web/modules/composer/

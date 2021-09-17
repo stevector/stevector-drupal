@@ -5,6 +5,7 @@ workflows:
     jobs:
     - playground/unit
     - pantheon/push:
+        terminus_clone_env: disablemods
         checkout: false
         pre-steps:
         - checkout

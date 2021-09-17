@@ -3,7 +3,7 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-    - playground/unit
+    # - playground/unit
     - pantheon/push:
         checkout: false
         pre-steps:
@@ -11,7 +11,6 @@ workflows:
         - playground/composer_install_no_dev
         - run: composer prepare-for-pantheon
         - run: cat .gitignore
-        - run: git status
         post-steps:
         - run: cd "/tmp/pantheon_repo" && git status
         - run: echo "testing CI on master branch"

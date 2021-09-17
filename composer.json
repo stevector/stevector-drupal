@@ -58,6 +58,10 @@
             }
         }
     },
+    "scripts": {
+
+        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon"
+    },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,

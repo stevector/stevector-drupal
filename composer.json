@@ -15,7 +15,7 @@
     "require": {
         
         "drush/drush": "^10",
-        "drupal/gutenberg": "^1.6",
+        "drupal/gutenberg": "^1.12",
         "php": ">=7.3",
         "composer/installers": "^1.8",
         "drupal/core-composer-scaffold": "^9",
